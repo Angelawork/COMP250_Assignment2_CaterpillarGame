@@ -1,7 +1,5 @@
 package assignment2;
 
-import javax.management.openmbean.CompositeDataSupport;
-
 public class World {
     private Caterpillar player;
     private Position food;
