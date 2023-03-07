@@ -6,8 +6,5 @@ public abstract class MyLinkedList<E> implements MyList<E> {
         return size;
     }
     @Override
-    public boolean isEmpty() { //whether the list is empty?
-        return size==0;
-    }
-    //only need to implement methods getSize and isEmpty?
+    public boolean isEmpty() {return size==0;}
 }

@@ -25,22 +25,13 @@ public class MyDoublyLinkedList<E> extends MyLinkedList<E> {
 		size=size+1;
 	}
 
-	public void clear(){//would this work well?
+	public void clear(){
 		head=null;
 		tail=null;
-		/*
-		DNode temp=head;
-		if(!isEmpty()) {
-			while (temp != null && temp.element != null) {
-				temp.element = null;
-				temp = temp.next;
-			}
-		}
-		 */
 		size=0;
 	}
 	public E remove(){
-		if(getSize()==0){throw new NoSuchElementException("The list is empty!");}
+		if(this.isEmpty()){throw new NoSuchElementException("The list is empty!");}
 		if (size == 1) {
 			E temp=head.element;
 			head = null;
@@ -81,8 +72,8 @@ public class MyDoublyLinkedList<E> extends MyLinkedList<E> {
 		this.add(elmt);
 	}
 
-	public E removeFirst(){//meaning of getSize if we can still access size here?
-		if(this.isEmpty()){throw new NoSuchElementException("The list is empty!");}//equivalent to using getSize()==0?
+	public E removeFirst(){
+		if(this.isEmpty()){throw new NoSuchElementException("The list is empty!");}
 		E temp=head.element;
 		if (size == 1) {
 			head = null;
@@ -112,9 +103,9 @@ public class MyDoublyLinkedList<E> extends MyLinkedList<E> {
 	public boolean equals(Object input){
 		if(input instanceof MyDoublyLinkedList) {
 			DNode myHead = this.head;
-			DNode inputHead = ((MyDoublyLinkedList)input).head;
+			DNode inputHead = ((MyDoublyLinkedList)input).head;//casting problems?
 			while(myHead!=null && inputHead!=null){
-				if(myHead.element!=inputHead.element){
+				if(! myHead.element.equals(inputHead.element)){
 					return false;
 				}
 				myHead=myHead.next;

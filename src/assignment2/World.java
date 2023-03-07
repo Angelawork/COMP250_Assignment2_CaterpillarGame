@@ -17,7 +17,7 @@ public class World {
     }
     public void step(){
         //1
-        if(this.actions.isEmpty()){this.myGame=GameState.NO_MORE_ACTION;}//need if-else block here or dequeue give error?
+        if(this.actions.isEmpty()){this.myGame=GameState.NO_MORE_ACTION;}
         else {
             Direction direction = this.actions.dequeue();
 
@@ -50,7 +50,7 @@ public class World {
                 this.myGame = GameState.SELF_COLLISION;
             } else if (towards.equals(food)) {
                 this.player.eat(towards);
-                if (this.targets.isEmpty()) this.myGame = GameState.DONE; //this step is included in this else-if?
+                if (this.targets.isEmpty()) {this.myGame = GameState.DONE;} //this step is included in this else-if?
                 else {
                     this.food = this.targets.dequeue();
                     this.myGame = GameState.EAT;

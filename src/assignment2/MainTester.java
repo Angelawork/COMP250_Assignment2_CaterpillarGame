@@ -4,16 +4,18 @@ public class MainTester {
     public static void main(String[] a) {
         long startTime = System.nanoTime();
 
-        /*
-        MyDoublyLinkedList<Integer> tester = new MyDoublyLinkedList<Integer>();
-        tester.add(1);
-        tester.addFirst(0);
-        MyDoublyLinkedList<Integer> tester2 = new MyDoublyLinkedList<Integer>();
-        tester2.add(0);
-        tester2.add(1);
-        System.out.println(tester.equals(tester2));
 
-         */
+        MyDoublyLinkedList<Integer> DLLtester = new MyDoublyLinkedList<Integer>();
+        DLLtester.add(1);
+        DLLtester.add(2);
+        MyDoublyLinkedList<String> DLLtester2 = new MyDoublyLinkedList<String>();
+        DLLtester2.add("hello");
+        MyDoublyLinkedList<String> DLLtester3 = new MyDoublyLinkedList<String>();
+        DLLtester3.add("yo");
+        DLLtester3.addFirst("Hey");
+        System.out.println(DLLtester2.equals(DLLtester3));
+        System.out.println("________________");
+
         /*
         MyStack<Integer> tester = new MyStack<Integer>();
 
@@ -41,6 +43,16 @@ public class MainTester {
         System.out.println(tester.equals(tester2));
 
          */
+        MyQueue<Integer> tester1=new MyQueue<Integer>();
+        tester1.enqueue(0);
+        MyQueue<String> tester2=new MyQueue<String>();
+        tester2.enqueue("0");
+        MyQueue<String> tester3=new MyQueue<String>();
+        tester3.enqueue("0");
+        System.out.println(tester1.equals(tester2));
+        System.out.println(tester3.equals(tester2));
+        System.out.println(tester1.equals(null));
+
         /*
         Position test1=new Position(1,2);
         Position test2=new Position(1,2);
@@ -49,13 +61,13 @@ public class MainTester {
         System.out.println(test1.equals(test2));
 
          */
-
+        /*
         TargetQueue tester1=new TargetQueue();
         tester1.addTargets("(9,9).(14,7).(10,7).(5,6).(1,9).");//empty str, str with space, single . or double ..?
 
         ActionQueue tester2=new ActionQueue();
         tester2.loadFromEncodedString("2[ES]1[E]2[2[E]1[N]]4[W]5[W]1[N]3[WS]1[W]");
-
+        */
         /*
         Region tester=new Region(0,3,5,6);
         Position test1=new Position(0,4);
@@ -70,10 +82,13 @@ public class MainTester {
         System.out.println(test.selfCollision(new Position(7,7)));
 
         */
+        /*
         World test=new World(tester1,tester2);
         test.getCaterpillar();
         test.step();
         test.getCaterpillar();
+
+         */
 
 
 

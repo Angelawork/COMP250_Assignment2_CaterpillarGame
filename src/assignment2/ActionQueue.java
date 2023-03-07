@@ -53,7 +53,6 @@ public class ActionQueue extends MyQueue<Direction>{
                 int times = counts.pop();
                 letter=letter.repeat(times);
                 letter=words.pop()+letter;
-                //System.out.println(letter);
             }
             else{
                 throw new IllegalArgumentException("Unknown symbol!");
