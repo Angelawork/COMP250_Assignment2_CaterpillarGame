@@ -6,7 +6,7 @@ public class TargetQueue extends MyQueue<Position>{
         super();
         this.parseStr=new MyStack<String>();
     }
-    public void clear(){//clears this queue and its stack field?
+    public void clear(){
         parseStr.clear();
         super.clear();
     }
@@ -14,7 +14,11 @@ public class TargetQueue extends MyQueue<Position>{
         String num="";
         int xCoord=0;
         int yCoord=0;
+        if(input.equals(""))return;
 
+        if(input.charAt(input.length()-1)!='.' && (input.charAt(input.length()-1)!=')')){
+            throw new IllegalArgumentException("Not proper ending!");
+        }
         for(int i=0;i<input.length();i++){
             char target=input.charAt(i);
 

@@ -7,13 +7,13 @@ public class MainTester {
 
         MyDoublyLinkedList<Integer> DLLtester = new MyDoublyLinkedList<Integer>();
         DLLtester.add(1);
-        DLLtester.add(2);
+        //DLLtester.add(null);
         MyDoublyLinkedList<String> DLLtester2 = new MyDoublyLinkedList<String>();
         DLLtester2.add("hello");
-        MyDoublyLinkedList<String> DLLtester3 = new MyDoublyLinkedList<String>();
-        DLLtester3.add("yo");
-        DLLtester3.addFirst("Hey");
-        System.out.println(DLLtester2.equals(DLLtester3));
+        MyDoublyLinkedList<Integer> DLLtester3 = new MyDoublyLinkedList<Integer>();
+        DLLtester3.add(1);
+        DLLtester3.add(null);
+        System.out.println(DLLtester.equals(DLLtester3));
         System.out.println("________________");
 
         /*
@@ -44,14 +44,17 @@ public class MainTester {
 
          */
         MyQueue<Integer> tester1=new MyQueue<Integer>();
-        tester1.enqueue(0);
+        MyQueue<Integer> tester0=new MyQueue<Integer>();
         MyQueue<String> tester2=new MyQueue<String>();
-        tester2.enqueue("0");
+        tester2.enqueue("1");
+        tester2.enqueue(null);
+        tester2.enqueue("45");
         MyQueue<String> tester3=new MyQueue<String>();
-        tester3.enqueue("0");
-        System.out.println(tester1.equals(tester2));
-        System.out.println(tester3.equals(tester2));
-        System.out.println(tester1.equals(null));
+        tester3.enqueue("1");
+        tester3.enqueue(null);
+        tester3.enqueue("45");
+        System.out.println(tester0.equals(tester1));
+        System.out.println(tester2.equals(tester1));
 
         /*
         Position test1=new Position(1,2);
@@ -61,13 +64,37 @@ public class MainTester {
         System.out.println(test1.equals(test2));
 
          */
-        /*
-        TargetQueue tester1=new TargetQueue();
-        tester1.addTargets("(9,9).(14,7).(10,7).(5,6).(1,9).");//empty str, str with space, single . or double ..?
 
-        ActionQueue tester2=new ActionQueue();
-        tester2.loadFromEncodedString("2[ES]1[E]2[2[E]1[N]]4[W]5[W]1[N]3[WS]1[W]");
-        */
+        TargetQueue myqueue=new TargetQueue();
+        myqueue.addTargets("");
+
+        ActionQueue myqueue2=new ActionQueue();
+        myqueue2.loadFromEncodedString("");
+        //queues should be clear if an exception should be raised? how to tell if its empty?
+        System.out.println("end of parse string");
+/*
+    String sTest1Valid = "(1,2).(2,4)";
+    String sTest2Valid = "(1,2).(2,4).(3,5)";
+    String sTest3ExtraNum = "(1,2).(2,4,5)";
+    String sTest4ExtraComma = "(1,,2).(2,4)";
+    String sTest5ExtraParen = "(1,2)).(2,4)";
+    String sTest6ExtraParen = "((1,2).(2,4)";
+    String sTest7ExtraParen = ")1,2).(2,4)";
+    String sTest8ExtraDot = "(1,2)..(2,4)";
+    String sTest9ExtraDot = ".(1,2).(2,4)"; //this should work?
+    String sTest10ExtraChar = "(1,2).(2,4)i";
+    String sTest11ExtraChar= "(1,i2).(2,4)";
+    String sTest12ExtraDot = "t";
+    String sTest13MissComma = "(1 2).(2,4)";
+    String sTest14MissDot = "(12)(2,4)";
+    String sTest15MissNum= "(12).(2,4)";
+    String sTest16MissParen= "(12,3.(2,4)";
+    String sTest18MissParen= "(12,3).(2,4";
+    String sTest19MissParen= "12,3).(2,4)";
+    String sTest20Valid= "(12,3)";
+    String sTest21Valid= "(12233,1233)";
+    String sTest22Valid= "(12233,1233).(12233,1233).(12233,1233).(12233,1233).(12233,1233)";
+ */
         /*
         Region tester=new Region(0,3,5,6);
         Position test1=new Position(0,4);

@@ -19,7 +19,7 @@ public class Position {
         this.x=input.x;
         this.y=input.y;
     }
-    public static int getDistance(Position input1,Position input2){ //calculation?
+    public static int getDistance(Position input1,Position input2){
         int result=Math.abs(input1.x-input2.x)+Math.abs(input1.y-input2.y);
         return result;
     }

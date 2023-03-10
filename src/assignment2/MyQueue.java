@@ -19,9 +19,9 @@ public class MyQueue<E>{
     }
 
     public boolean equals(Object input){
-        if(input instanceof MyQueue<?>)//instanceof MyQueue<E>?
-        { return this.myList.equals(((MyQueue<?>) input).myList);}//does this casting cause any error with generic types?
-        else{return false;}//(MyQueue<E>) input) or ((MyQueue) input)?
+        if(input instanceof MyQueue)//don't need the generics when using instanceof
+        { return this.myList.equals(((MyQueue<?>) input).myList);}
+        else{return false;}
     }
 
 }
