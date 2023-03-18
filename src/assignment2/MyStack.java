@@ -4,7 +4,7 @@ public class MyStack<E> {
     private MyDoublyLinkedList<E> myList;
     public MyStack(){
         myList=new MyDoublyLinkedList<E>();
-    } //initialize?
+    }
     public void push(E elmt){
         myList.addFirst(elmt);
     }

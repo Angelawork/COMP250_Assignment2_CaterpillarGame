@@ -102,15 +102,15 @@ public class MyDoublyLinkedList<E> extends MyLinkedList<E> {
 
 	public boolean equals(Object input){
 		if(input instanceof MyDoublyLinkedList) {
-			if(((MyDoublyLinkedList<E>)input).isEmpty() && this.isEmpty()) return true;//?
+			if(((MyDoublyLinkedList<E>)input).isEmpty() && this.isEmpty()) return true;
 
 			DNode myHead = this.head;
-			DNode inputHead = ((MyDoublyLinkedList<E>)input).head;//casting problems?
+			DNode inputHead = ((MyDoublyLinkedList<E>)input).head;
 
 			while(myHead!=null && inputHead!=null){
 				if(myHead.element==null){if(inputHead.element!=null) return false;}
 				else {
-					if (!myHead.element.equals(inputHead.element)) { //null cases?
+					if (!myHead.element.equals(inputHead.element)) {
 						return false;
 					}
 				}

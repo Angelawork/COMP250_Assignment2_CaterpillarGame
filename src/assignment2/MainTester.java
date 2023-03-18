@@ -6,14 +6,11 @@ public class MainTester {
 
 
         MyDoublyLinkedList<Integer> DLLtester = new MyDoublyLinkedList<Integer>();
-        DLLtester.add(1);
-        //DLLtester.add(null);
+        DLLtester.add(null);
+        DLLtester.add(null);
         MyDoublyLinkedList<String> DLLtester2 = new MyDoublyLinkedList<String>();
-        DLLtester2.add("hello");
-        MyDoublyLinkedList<Integer> DLLtester3 = new MyDoublyLinkedList<Integer>();
-        DLLtester3.add(1);
-        DLLtester3.add(null);
-        System.out.println(DLLtester.equals(DLLtester3));
+        DLLtester2.add(null);
+        System.out.println(DLLtester.equals(DLLtester2));
         System.out.println("________________");
 
         /*
@@ -28,21 +25,19 @@ public class MainTester {
         System.out.println(tester.peek());
 
          */
-        /*
-        MyQueue<Integer> tester=new MyQueue<>();
-        tester.enqueue(0);
-        tester.enqueue(1);
-        tester.enqueue(2);
-        tester.enqueue(3);
 
+        MyQueue<String> tester=new MyQueue<>();
+        tester.clear();
         MyQueue<Integer> tester2=new MyQueue<>();
         tester2.enqueue(0);
         tester2.enqueue(1);
         tester2.enqueue(2);
         tester2.enqueue(3);
+        tester2.clear();
         System.out.println(tester.equals(tester2));
 
-         */
+
+        /*/
         MyQueue<Integer> tester1=new MyQueue<Integer>();
         MyQueue<Integer> tester0=new MyQueue<Integer>();
         MyQueue<String> tester2=new MyQueue<String>();
@@ -55,7 +50,7 @@ public class MainTester {
         tester3.enqueue("45");
         System.out.println(tester0.equals(tester1));
         System.out.println(tester2.equals(tester1));
-
+        */
         /*
         Position test1=new Position(1,2);
         Position test2=new Position(1,2);
@@ -65,12 +60,11 @@ public class MainTester {
 
          */
 
-        TargetQueue myqueue=new TargetQueue();
-        myqueue.addTargets("");
+        TargetQueue myqueue = new TargetQueue();
+        myqueue.addTargets(".(1,()");
 
-        ActionQueue myqueue2=new ActionQueue();
-        myqueue2.loadFromEncodedString("");
-        //queues should be clear if an exception should be raised? how to tell if its empty?
+        ActionQueue myqueue2 = new ActionQueue();
+        myqueue2.loadFromEncodedString("2[3[10[SEW]2[NEW]]2[EW]]");
         System.out.println("end of parse string");
 /*
     String sTest1Valid = "(1,2).(2,4)";
@@ -118,15 +112,11 @@ public class MainTester {
          */
 
 
-
-
-
-
         long endTime = System.nanoTime();
 
         double duration = (endTime - startTime) / 1000000000.0;
         System.out.println("Runtime in seconds: " + duration);
-        }
-
     }
+}
+
 

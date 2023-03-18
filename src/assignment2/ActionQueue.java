@@ -17,9 +17,7 @@ public class ActionQueue extends MyQueue<Direction>{
         String num="";
         String letter="";
 
-        if(input.equals(""))return;
-
-        //if(input.charAt(input.length()-1)!=']'){throw new IllegalArgumentException("Not proper ending!");}
+        if(input.equals("")){throw new IllegalArgumentException("Syntax error: empty string!");}
 
         for(int i=0;i<input.length();i++){
             char target=input.charAt(i);
@@ -27,13 +25,6 @@ public class ActionQueue extends MyQueue<Direction>{
                 letter=letter+target;
             }
             else if(target>='0'&&target<='9'){
-                /*detect 2[N1[E]] ?
-                if((i-1)>=0){
-                    char temp=input.charAt(i-1);
-                    if(!(temp>='0' && temp<='9') && !(temp=='[' || temp==']')) //if not a number and not []
-                        throw new IllegalArgumentException("Syntax error:letter with num DK[D]");
-                }
-                 */
                 num=num+target;
             }
 

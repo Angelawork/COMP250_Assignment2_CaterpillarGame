@@ -14,11 +14,13 @@ public class TargetQueue extends MyQueue<Position>{
         String num="";
         int xCoord=0;
         int yCoord=0;
+
         if(input.equals(""))return;
 
         if(input.charAt(input.length()-1)!='.' && (input.charAt(input.length()-1)!=')')){
             throw new IllegalArgumentException("Not proper ending!");
         }
+
         for(int i=0;i<input.length();i++){
             char target=input.charAt(i);
 
@@ -54,6 +56,7 @@ public class TargetQueue extends MyQueue<Position>{
                     int myInt = Integer.parseInt(parseStr.pop());
                     String leftParen = parseStr.pop();
                     if (!(comma.equals(",") && leftParen.equals("("))) throw new IllegalArgumentException();
+                    if (!(parseStr.isEmpty())) throw new IllegalArgumentException();
                 }
                 catch(Exception e){throw new IllegalArgumentException("Syntax error:')' & incorrect stack");}
 
