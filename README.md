@@ -1,7 +1,7 @@
 # COMP250_CaterpillarGame
 🐛This assignment is meant  to practice different data structures and their applications.🦋
 
-<img src="https://user-images.githubusercontent.com/113480613/235355624-f594339b-2c70-4137-9b8c-f225fb8a84e0.png" height="250" width="250">
+<img src="https://user-images.githubusercontent.com/113480613/235355836-84d9ebd6-448c-48fc-ae0e-5262fa8e824f.png" height="250" width="250">
 
 ## Assignment 2 March 3, 2023
 # PART - I: Data Structures
