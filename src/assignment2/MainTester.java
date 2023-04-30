@@ -1,5 +1,7 @@
 package assignment2;
 
+import java.util.ArrayList;
+
 public class MainTester {
     public static void main(String[] a) {
         long startTime = System.nanoTime();
@@ -60,12 +62,24 @@ public class MainTester {
 
          */
 
-        TargetQueue myqueue = new TargetQueue();
-        myqueue.addTargets(".(1,()");
+            TargetQueue test = new TargetQueue();
+            test.addTargets("");
+            test.addTargets("(9,5019).(31074,11)");
 
-        ActionQueue myqueue2 = new ActionQueue();
-        myqueue2.loadFromEncodedString("2[3[10[SEW]2[NEW]]2[EW]]");
-        System.out.println("end of parse string");
+            boolean exceptionThrown;
+
+            ArrayList<String> inputs = new ArrayList<>();
+        test.addTargets("");                             // empty string
+        test.addTargets("(9,5019).(31074,11)");          // correct input
+        test.addTargets("(1,19).(4,901)");               // correct input
+        test.addTargets("(1,8129).(4,1).(31,3)");        // correct input
+        test.addTargets("(11,9).(2084,31).(1,31931)");   // correct input
+        test.addTargets("(1,319).(4112,221).(381,853)"); // correct input
+
+        for (String input : inputs) {
+             //test.addTargets(input);
+         }
+
 /*
     String sTest1Valid = "(1,2).(2,4)";
     String sTest2Valid = "(1,2).(2,4).(3,5)";
